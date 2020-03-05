@@ -1,4 +1,6 @@
-<p id=”notice”><%= notice %></p>
+<p id="notice"><%= flash[:notice] %></p>
+<p id="error"><%= flash[:error] %></p>
+
 <%= form_for @user do |f|%>
     <div class="form-group row col-md-12">
         <%= f.label :username, class:"col-sm-2 col-form-label"%><br>
@@ -21,6 +23,10 @@
     </div>
 
     <div class="form-group row col-md-12">
+        <div class="col-md-6">
+            <%= f.label :current_password, placeholder: "Enter current password" %>
+            <%= password_field_tag :current_password, params[:current_password] %>
+        </div>
         <div class="col-md-6">
             <%= f.label :password, "Enter a new Password"%>
             <%= f.password_field :password, class:"form-control" %>

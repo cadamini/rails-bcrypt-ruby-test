@@ -21,7 +21,6 @@ class UsersController < ApplicationController
       redirect_to @user, notice: 'User was successfully created.'        
     else
       render :new
-
     end
   end
 
@@ -31,10 +30,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+    user = User.find_by(username: @user.username).try(:authenticate, params[:current_password])
+    if user && @user.update(user_params)
+      # sign_in @user # no implemented here
+      redirect_to @user, notice: 'Profile updated'
     else
-      render :edit
+      flash[:error] = 'You entered your current password incorrectly'
+      render 'edit'
     end
   end
 
