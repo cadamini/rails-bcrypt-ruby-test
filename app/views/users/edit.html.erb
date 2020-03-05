@@ -7,27 +7,29 @@
 
     <div class="form-group row col-md-12">
         <div class="col-md-2">
-            <%= f.label :title%><br>
+            <%= f.label :title%>
             <%= f.text_field :title, class:"form-control" %>
         </div>
         <div class="col-md-5">
-            <%= f.label :firstName, "First Name" %><br>
+            <%= f.label :firstName, "First Name" %>
             <%= f.text_field :firstName, class:"form-control" %>
         </div>
         <div class="col-md-5">
-            <%= f.label :surname %><br>
+            <%= f.label :surname %>
             <%= f.text_field :surname, class:"form-control" %>
         </div>
     </div>
 
     <div class="form-group row col-md-12">
         <div class="col-md-6">
-            <%= f.label :password, "New Password"%><br>
+            <%= f.label :password, "Enter a new Password"%>
             <%= f.password_field :password, class:"form-control" %>
         </div>
-        <small id="passwordHelpBlock" class="form-text text-muted col-md-12">
-            <=To update your password, please confirm your current password.>
-        </small>
+        <div class="col-md-6">
+            <%= f.label :password_confirmation, "Repeat your new Password"%>
+            <%= f.password_field :password_confirmation, class:"form-control" %>
+        </div>
+
     </div>
 
     <%= f.submit "Submit" ,class: "btn btn-primary"%>
