@@ -1,24 +1,12 @@
-# README
+## What's in here?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A little rails test app showing how the `has_secure_password` option in a rails user model using the bcrypt ruby gem. 
 
-Things you may want to cover:
+## Why? 
 
-* Ruby version
+This has been used to learn some rails stuff and to answer the following question at Stackoverflow: https://stackoverflow.com/a/60533351/3842598
 
-* System dependencies
+## Bcrypt
 
-* Configuration
+https://github.com/codahale/bcrypt-ruby
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
