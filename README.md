@@ -1,6 +1,6 @@
 ## What's in here?
 
-A little rails test app showing how the `has_secure_password` option in a rails user model using the bcrypt ruby gem. 
+A little rails test app showing the `has_secure_password` option in a rails user model using the bcrypt ruby gem. 
 
 ## Why? 
 
